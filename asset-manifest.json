@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ozark19/music/static/css/main.3618b4dc.chunk.css",
+    "main.js": "/ozark19/music/static/js/main.35e7233b.chunk.js",
+    "main.js.map": "/ozark19/music/static/js/main.35e7233b.chunk.js.map",
+    "runtime-main.js": "/ozark19/music/static/js/runtime-main.aacb4baa.js",
+    "runtime-main.js.map": "/ozark19/music/static/js/runtime-main.aacb4baa.js.map",
+    "static/js/2.52e377f9.chunk.js": "/ozark19/music/static/js/2.52e377f9.chunk.js",
+    "static/js/2.52e377f9.chunk.js.map": "/ozark19/music/static/js/2.52e377f9.chunk.js.map",
+    "index.html": "/ozark19/music/index.html",
+    "precache-manifest.026e88b535cae0a90816eb525e1d45f5.js": "/ozark19/music/precache-manifest.026e88b535cae0a90816eb525e1d45f5.js",
+    "service-worker.js": "/ozark19/music/service-worker.js",
+    "static/css/main.3618b4dc.chunk.css.map": "/ozark19/music/static/css/main.3618b4dc.chunk.css.map",
+    "static/js/2.52e377f9.chunk.js.LICENSE": "/ozark19/music/static/js/2.52e377f9.chunk.js.LICENSE",
+    "static/media/city.jpg": "/ozark19/music/static/media/city.236a33fd.jpg",
+    "static/media/plant.jpg": "/ozark19/music/static/media/plant.013e4a6e.jpg",
+    "static/media/sky.jpg": "/ozark19/music/static/media/sky.3553bf5d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.aacb4baa.js",
+    "static/js/2.52e377f9.chunk.js",
+    "static/css/main.3618b4dc.chunk.css",
+    "static/js/main.35e7233b.chunk.js"
+  ]
+}
