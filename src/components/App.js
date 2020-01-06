@@ -22,16 +22,16 @@ class App extends React.Component {
   onTermSubmit = async term => {
     const KEY = "78a50c5d9505a79b657a2f71d67bb125";
     const getTopTracks = await fetch(
-      `http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${term}&api_key=${KEY}&format=json&limit=15`
+      `https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${term}&api_key=${KEY}&format=json&limit=15`
     );
     const getArtistInfo = await fetch(
-      `http://ws.audioscrobbler.com/2.0/?method=artist.getInfo&artist=${term}&api_key=${KEY}&format=json`
+      `https://ws.audioscrobbler.com/2.0/?method=artist.getInfo&artist=${term}&api_key=${KEY}&format=json`
     );
     const getSimilar = await fetch(
-      `http://ws.audioscrobbler.com/2.0/?method=artist.getSimilar&artist=${term}&api_key=${KEY}&format=json&limit=9`
+      `https://ws.audioscrobbler.com/2.0/?method=artist.getSimilar&artist=${term}&api_key=${KEY}&format=json&limit=9`
     );
     const getPhoto = await fetch(
-      `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${term}&api_key=${KEY}&format=json&limit=9`
+      `https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${term}&api_key=${KEY}&format=json&limit=9`
     );
     const topTracks = await getTopTracks.json();
     const artistInfo = await getArtistInfo.json();
