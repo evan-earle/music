@@ -49,7 +49,7 @@ class App extends React.Component {
     //Iterating through array of artist names, fetching album image for each
     for (let i = 0; i < arr.length; i++) {
       const getData = await fetch(
-        `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${arr[i]}&api_key=${KEY}&format=json&limit=9`
+        `https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${arr[i]}&api_key=${KEY}&format=json&limit=9`
       ).then(response => response.json());
 
       newArr.push(getData);
