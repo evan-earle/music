@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  color: white;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.home-container {
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.hero {
+  position: relative;
+  position: absolute;
+  width: 100%;
+  height: 20em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.25em;
+  top: 10%;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  bottom: 0;
+  margin-bottom: 1em;
+  position: absolute;
+}
+
+.music-container {
+  background-color: #272733;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bio-container {
+  margin-left: 2em;
+  padding: none;
+  margin-top: 6em;
+  width: 60%;
+  font-weight: 100;
+}
+
+.youtube-container {
+  width: 35%;
+  margin-top: 6em;
+  margin-left: 1em;
+}
+
+.youtube-image {
+  width: 100%;
+}
+
+.similar-container {
+  width: 35%;
+  margin-left: 1em;
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.similar-title {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  width: 100%;
+  border-bottom: solid 1px grey;
+  font-size: 1.25em;
+  background-color: #1c1c25;
+}
+
+.similar-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.25em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.tags {
+  text-transform: capitalize;
+  font-size: 0.85em;
+  color: grey;
+}
+
+.img-bio {
+  display: flex;
+}
+
+.bio {
+  height: 10em;
+  margin-left: 1em;
+  margin-top: 0;
+  line-height: 1.5em;
+}
+
+.bio-link {
+  text-decoration: none;
+  color: grey;
+}
+
+.top-tracks-container {
+  margin-left: 2em;
+  width: 60%;
+  margin-top: 1em;
+}
+
+.top-tracks-title {
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: solid 1px grey;
+  font-size: 1.25em;
+  background-color: #1c1c25;
+}
+
+.top-tracks-list {
+  margin-top: 0em;
+  margin-bottom: 0em;
+  list-style-type: none;
+  padding-left: 0em;
+  width: 100%;
+}
+
+.count {
+  text-align: center;
+  width: 3em;
+  color: grey;
+}
+
+.songs {
+  border-bottom: solid grey 1px;
+  line-height: 2.75em;
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 400;
+}
+
+.track {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  padding-left: 0em;
+}
+
+.lyrics-container {
+  padding-bottom: 0em;
+  text-align: right;
+  height: 2.5em;
+  margin-right: 1em;
+}
+
+.modal {
+  height: 120vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content {
+  height: 500px;
+  width: 700px;
+  position: absolute;
+  top: 10%;
+}
+
+.modal-title {
+  height: 5em;
+  background-color: #1c1c25;
+  line-height: 5em;
+  padding-left: 2em;
+}
+
+.modal-title-text {
+  font-size: 1.25em;
+}
+
+.close-modal {
+  position: absolute;
+  font-size: 1.5em;
+  width: 1em;
+  line-height: 0em;
+  top: 0;
+  right: 0;
+  margin-top: 0.5em;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+
+.modal-lyrics {
+  overflow-y: scroll;
+  overflow-x: auto;
+  height: 400px;
+  background-color: #272733;
+  font-size: 1.25em;
+  font-weight: 100;
+  line-height: 0.85em;
+}
