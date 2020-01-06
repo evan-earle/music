@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/music/static/css/main.c8e8fad7.chunk.css",
-    "main.js": "/music/static/js/main.108819b8.chunk.js",
-    "main.js.map": "/music/static/js/main.108819b8.chunk.js.map",
+    "main.js": "/music/static/js/main.919996bd.chunk.js",
+    "main.js.map": "/music/static/js/main.919996bd.chunk.js.map",
     "runtime-main.js": "/music/static/js/runtime-main.61d48908.js",
     "runtime-main.js.map": "/music/static/js/runtime-main.61d48908.js.map",
     "static/js/2.be601472.chunk.js": "/music/static/js/2.be601472.chunk.js",
     "static/js/2.be601472.chunk.js.map": "/music/static/js/2.be601472.chunk.js.map",
     "index.html": "/music/index.html",
-    "precache-manifest.16f255dd9305b01370addfc85c32af97.js": "/music/precache-manifest.16f255dd9305b01370addfc85c32af97.js",
+    "precache-manifest.8067ad7ffc645ce3ce315c3a9ef14a52.js": "/music/precache-manifest.8067ad7ffc645ce3ce315c3a9ef14a52.js",
     "service-worker.js": "/music/service-worker.js",
     "static/css/main.c8e8fad7.chunk.css.map": "/music/static/css/main.c8e8fad7.chunk.css.map",
     "static/js/2.be601472.chunk.js.LICENSE": "/music/static/js/2.be601472.chunk.js.LICENSE",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.61d48908.js",
     "static/js/2.be601472.chunk.js",
     "static/css/main.c8e8fad7.chunk.css",
-    "static/js/main.108819b8.chunk.js"
+    "static/js/main.919996bd.chunk.js"
   ]
 }
