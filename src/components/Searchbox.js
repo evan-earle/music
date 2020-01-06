@@ -49,6 +49,7 @@ class Searchbox extends React.Component {
                   }}
                 ></input>
                 <i
+                  onClick={this.onFormSubmit}
                   className="fas fa-search"
                   style={{
                     color: "grey",
@@ -90,6 +91,7 @@ class Searchbox extends React.Component {
               }}
             ></input>
             <i
+              onClick={this.onFormSubmit}
               className="fas fa-search"
               style={{
                 color: "grey",

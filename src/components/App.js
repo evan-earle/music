@@ -16,7 +16,8 @@ class App extends React.Component {
     artistBio: null,
     topTracks: null,
     getMore: null,
-    similarArtist: null
+    similarArtist: null,
+    similarTitle: null
   };
 
   onTermSubmit = async term => {
@@ -51,26 +52,26 @@ class App extends React.Component {
 
     let arr = artistArray;
     let newArr = [];
-    let newerArr = [];
 
     //Iterating through array of artist names, fetching album image for each
     for (let i = 0; i < arr.length; i++) {
       const getData = await fetch(
         `https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${arr[i]}&api_key=${KEY}&format=json&limit=9`
       ).then(response => response.json());
-
       newArr.push(getData);
     }
-    for (let j = 0; j < newArr.length; j++) {
-      let artistImages = newArr[j].topalbums.album[0].image[3]["#text"];
-      newerArr.push(artistImages);
 
-      if (newerArr[j] === "") {
-        newerArr[j] =
+    for (let j = 0; j < newArr.length; j++) {
+      if (newArr[j].topalbums.album.length === 0) {
+        newArr[j] =
           "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png";
+      } else if (newArr[j].topalbums.album[0].image[3]["#text"] === "") {
+        newArr[j] =
+          "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png";
+      } else {
+        newArr[j] = newArr[j].topalbums.album[0].image[3]["#text"];
       }
     }
-
     //Getting array of tags, mapping to a new array, and joining them into a string
     const artist = artistInfo.artist.tags.tag;
     const newArtist = artist.map(element => element.name);
@@ -92,7 +93,8 @@ class App extends React.Component {
       artistBio: newBio[0],
       topTracks: newTopTracks,
       similarArtist: artistArray,
-      similarImages: newerArr
+      similarImages: newArr,
+      similarTitle: artistArray
     });
   };
 
@@ -135,6 +137,7 @@ class App extends React.Component {
           topTracks={this.state.topTracks}
           similarArtist={this.state.similarArtist}
           similarImages={this.state.similarImages}
+          similarTitle={this.state.similarTitle}
           onPhotoClick={this.onTermSubmit}
         />
       </div>

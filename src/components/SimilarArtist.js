@@ -16,7 +16,7 @@ class SimilarArtist extends React.Component {
         <div className="similar-boxes">
           <div>
             <img
-              title={this.props.similarArtist[0]}
+              title={this.props.similarTitle[0]}
               src={this.props.similarImages[0]}
               alt="similar artist"
               onClick={() => {
@@ -28,7 +28,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
-              title={this.props.similarArtist[1]}
+              title={this.props.similarTitle[1]}
               src={this.props.similarImages[1]}
               alt="similar artist"
               onClick={() => {
@@ -40,7 +40,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
-              title={this.props.similarArtist[2]}
+              title={this.props.similarTitle[2]}
               src={this.props.similarImages[2]}
               alt="similar artist"
               onClick={() => {
@@ -52,7 +52,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
-              title={this.props.similarArtist[3]}
+              title={this.props.similarTitle[3]}
               src={this.props.similarImages[3]}
               alt="similar artist"
               onClick={() => {
@@ -64,7 +64,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
-              title={this.props.similarArtist[4]}
+              title={this.props.similarTitle[4]}
               src={this.props.similarImages[4]}
               alt="similar artist"
               onClick={() => {
@@ -76,7 +76,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
-              title={this.props.similarArtist[5]}
+              title={this.props.similarTitle[5]}
               src={this.props.similarImages[5]}
               alt="similar artist"
               onClick={() => {
@@ -88,7 +88,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
-              title={this.props.similarArtist[6]}
+              title={this.props.similarTitle[6]}
               src={this.props.similarImages[6]}
               alt="similar artist"
               onClick={() => {
@@ -100,7 +100,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
-              title={this.props.similarArtist[7]}
+              title={this.props.similarTitle[7]}
               src={this.props.similarImages[7]}
               alt="similar artist"
               onClick={() => {
@@ -112,7 +112,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
-              title={this.props.similarArtist[8]}
+              title={this.props.similarTitle[8]}
               src={this.props.similarImages[8]}
               alt="similar artist"
               onClick={() => {
