@@ -38,6 +38,13 @@ class App extends React.Component {
     const photo = await getPhoto.json();
     const similar = await getSimilar.json();
     const similarArtists = similar.similarartists.artist;
+    let artistPhoto = photo.topalbums.album[0].image[3]["#text"];
+
+    //If artist image is an empty string, return generic image
+    if (artistPhoto === "") {
+      artistPhoto =
+        "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png";
+    }
 
     //Get array of similar artists
     const artistArray = similarArtists.map(element => element.name);
@@ -57,9 +64,13 @@ class App extends React.Component {
     for (let j = 0; j < newArr.length; j++) {
       let artistImages = newArr[j].topalbums.album[0].image[3]["#text"];
       newerArr.push(artistImages);
+
+      if (newerArr[j] === "") {
+        newerArr[j] =
+          "https://lastfm.freetls.fastly.net/i/u/300x300/2a96cbd8b46e442fc41c2b86b821562f.png";
+      }
     }
 
-    console.log(newerArr);
     //Getting array of tags, mapping to a new array, and joining them into a string
     const artist = artistInfo.artist.tags.tag;
     const newArtist = artist.map(element => element.name);
@@ -77,7 +88,7 @@ class App extends React.Component {
       page: "music",
       artistName: artistInfo.artist.name,
       artistTags: tags,
-      artistImage: photo.topalbums.album[0].image[3]["#text"],
+      artistImage: artistPhoto,
       artistBio: newBio[0],
       topTracks: newTopTracks,
       similarArtist: artistArray,

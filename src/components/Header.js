@@ -16,14 +16,16 @@ class Header extends React.Component {
             lineHeight: "2.5em"
           }}
         >
-          <img
-            src={favicon}
-            height="24px"
-            alt="logo"
-            width="24px"
-            style={{ paddingRight: "0.25em", marginBottom: "-0.25em" }}
-          ></img>
-          ASTRAL
+          <a href="https://ozark19.github.io/music/">
+            <img
+              src={favicon}
+              height="24px"
+              alt="logo"
+              width="24px"
+              style={{ paddingRight: "0.25em", marginBottom: "-0.25em" }}
+            ></img>
+            ASTRAL
+          </a>
         </div>
       );
     } else {
@@ -42,14 +44,16 @@ class Header extends React.Component {
             borderBottom: "solid black 1px"
           }}
         >
-          <img
-            src={favicon}
-            alt="logo"
-            height="24px"
-            width="24px"
-            style={{ paddingRight: "0.25em", marginBottom: "-0.25em" }}
-          ></img>
-          ASTRAL
+          <a href="https://ozark19.github.io/music/">
+            <img
+              src={favicon}
+              alt="logo"
+              height="24px"
+              width="24px"
+              style={{ paddingRight: "0.25em", marginBottom: "-0.25em" }}
+            ></img>
+            ASTRAL
+          </a>
         </div>
       );
     }
