@@ -19,8 +19,10 @@ class Searchbox extends React.Component {
       return (
         <div>
           <div className="hero">
-            <h1>Discover new music or listen to your favourite artists</h1>
-            <p>
+            <h1 className="animated fadeInLeft slow">
+              Discover new music or listen to your favourite artists
+            </h1>
+            <p className="animated fadeInLeft slow">
               Explore unlimited free music, find similar artists, top tracks,
               lyrics, and more
             </p>
@@ -33,7 +35,10 @@ class Searchbox extends React.Component {
                 top: "95%"
               }}
             >
-              <form onSubmit={this.onFormSubmit}>
+              <form
+                className="animated fadeInUp delay-2s"
+                onSubmit={this.onFormSubmit}
+              >
                 <input
                   type="text"
                   placeholder="Search"

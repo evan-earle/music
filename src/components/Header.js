@@ -13,7 +13,8 @@ class Header extends React.Component {
             cursor: "pointer",
             color: "white",
             boxSizing: "border-box",
-            lineHeight: "2.5em"
+            lineHeight: "2.5em",
+            top: 0
           }}
         >
           <a href="https://ozark19.github.io/music/">
