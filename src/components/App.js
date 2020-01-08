@@ -8,6 +8,7 @@ import city from "./assets/city.jpg";
 import plant from "./assets/plant.jpg";
 import sky from "./assets/sky.jpg";
 
+//Render one of three backgrounds to the homepage
 let background = "";
 const backgroundPicker = () => {
   let choice = Math.floor(Math.random() * 3);
@@ -128,21 +129,19 @@ class App extends React.Component {
   };
 
   renderHome() {
-    //Render one of three backgrounds to the homepage
-
     return (
       <div
         className="home-container"
         style={{ backgroundImage: `url(${background})` }}
       >
         <Header page={this.state.page} />
-        <Searchbox onFormSubmit={this.onTermSubmit} page={this.state.page} />
+        <Searchbox
+          onFormSubmit={this.onTermSubmit}
+          page={this.state.page}
+          error={this.state.error}
+        />
         {this.state.loading && <Loading page={this.state.page} />}
-        {this.state.error && (
-          <div className="error animated delay-2s fadeOut">
-            The artist you supplied could not be found
-          </div>
-        )}
+
         <Footer />
       </div>
     );

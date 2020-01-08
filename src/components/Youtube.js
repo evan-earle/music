@@ -1,11 +1,11 @@
 import React from "react";
-import Blankvideo from "./assets/blankvideo.PNG";
+import blankVideo from "./assets/blankvideo.PNG";
 
 class Youtube extends React.Component {
   render() {
     if (!this.props.play) {
       return (
-        <img className="youtube-image" alt="blank video" src={Blankvideo}></img>
+        <img className="youtube-image" alt="blank video" src={blankVideo}></img>
       );
     } else {
       return (

@@ -19,7 +19,7 @@ class Searchbox extends React.Component {
       return (
         <div>
           <div className="hero">
-            <h1 className="animated fadeInLeft slow">
+            <h1 className="animated fadeInLeft slow discover">
               Discover new music or listen to your favourite artists
             </h1>
             <p className="animated fadeInLeft slow">
@@ -40,6 +40,7 @@ class Searchbox extends React.Component {
                 onSubmit={this.onFormSubmit}
               >
                 <input
+                  className="searchbox"
                   type="text"
                   placeholder="Search"
                   value={this.state.term}
@@ -68,6 +69,13 @@ class Searchbox extends React.Component {
                 ></i>
               </form>
             </div>
+            {this.props.error ? (
+              <div className="error animated delay-2s fadeOut">
+                The artist you supplied could not be found
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       );
