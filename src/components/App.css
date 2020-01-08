@@ -300,6 +300,10 @@ img {
   font-weight: 400;
 }
 
+.songs:hover {
+  background-color: #1c1c25;
+}
+
 .track {
   width: 100%;
 }
