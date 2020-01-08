@@ -46,7 +46,7 @@ class Artist extends React.Component {
     };
 
     return (
-      <div>
+      <div className="wrapper">
         <Modal
           lyrics={this.state.lyrics}
           toggle={this.state.toggle}
