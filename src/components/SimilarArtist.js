@@ -16,6 +16,7 @@ class SimilarArtist extends React.Component {
         <div className="similar-boxes">
           <div>
             <img
+              className="similar-img"
               title={this.props.similarTitle[0]}
               src={this.props.similarImages[0]}
               alt="similar artist"
@@ -28,6 +29,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
+              className="similar-img"
               title={this.props.similarTitle[1]}
               src={this.props.similarImages[1]}
               alt="similar artist"
@@ -40,6 +42,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
+              className="similar-img"
               title={this.props.similarTitle[2]}
               src={this.props.similarImages[2]}
               alt="similar artist"
@@ -52,6 +55,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
+              className="similar-img"
               title={this.props.similarTitle[3]}
               src={this.props.similarImages[3]}
               alt="similar artist"
@@ -64,6 +68,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
+              className="similar-img"
               title={this.props.similarTitle[4]}
               src={this.props.similarImages[4]}
               alt="similar artist"
@@ -76,6 +81,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
+              className="similar-img"
               title={this.props.similarTitle[5]}
               src={this.props.similarImages[5]}
               alt="similar artist"
@@ -88,6 +94,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
+              className="similar-img"
               title={this.props.similarTitle[6]}
               src={this.props.similarImages[6]}
               alt="similar artist"
@@ -100,6 +107,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
+              className="similar-img"
               title={this.props.similarTitle[7]}
               src={this.props.similarImages[7]}
               alt="similar artist"
@@ -112,6 +120,7 @@ class SimilarArtist extends React.Component {
           </div>
           <div>
             <img
+              className="similar-img"
               title={this.props.similarTitle[8]}
               src={this.props.similarImages[8]}
               alt="similar artist"
