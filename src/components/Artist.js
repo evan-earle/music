@@ -31,11 +31,12 @@ class Artist extends React.Component {
     };
 
     const getVideo = async track => {
-      const KEY = "AIzaSyD5W6CH98T8nz9juTpuu9LproRU9LyM_qw";
+      const KEY = "AIzaSyBlEeObrR2ehRiaJ66E6gIi1IqGwgAbD6I";
       const fetchVideo = await fetch(
         `https://www.googleapis.com/youtube/v3/search/?q=${this.props.artistName}%20${track}&key=${KEY}&maxResults=1&part=snippet&type=video`
       );
       const video = await fetchVideo.json();
+      console.log(video);
       const videoId = video.items[0].id.videoId;
 
       this.setState({ videoId: videoId, play: true });
