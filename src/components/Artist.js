@@ -8,7 +8,7 @@ class Artist extends React.Component {
     lyrics: null,
     toggle: false,
     videoId: null,
-    play: false
+    play: false,
   };
 
   render() {
@@ -17,7 +17,7 @@ class Artist extends React.Component {
       count = 1;
     }
 
-    const getLyrics = async track => {
+    const getLyrics = async (track) => {
       const fetchLyrics = await fetch(
         `https://api.lyrics.ovh/v1/${this.props.artistName}/${track}`
       );
@@ -26,16 +26,16 @@ class Artist extends React.Component {
       this.setState({
         lyrics: lyrics.lyrics,
         toggle: true,
-        track: track
+        track: track,
       });
     };
 
-    const getVideo = async track => {
-      const KEY = "AIzaSyCO8SsYeYLBYcUwxcU1dpDD8aaRSVoOf3w";
+    const getVideo = async (track) => {
       const fetchVideo = await fetch(
-        `https://www.googleapis.com/youtube/v3/search/?q=${this.props.artistName}%20${track}&key=${KEY}&maxResults=1&part=snippet&type=video`
+        `https://www.googleapis.com/youtube/v3/search/?q=${this.props.artistName}%20${track}&key=${process.env.REACT_APP_SONG_API_KEY}&maxResults=1&part=snippet&type=video`
       );
       const video = await fetchVideo.json();
+
       const videoId = video.items[0].id.videoId;
 
       this.setState({ videoId: videoId, play: true });
@@ -85,7 +85,7 @@ class Artist extends React.Component {
               <div
                 style={{
                   width: "150px",
-                  paddingLeft: "2em"
+                  paddingLeft: "2em",
                 }}
               >
                 Top Tracks
@@ -93,14 +93,14 @@ class Artist extends React.Component {
               <div
                 style={{
                   width: "50px",
-                  paddingRight: "3.5em"
+                  paddingRight: "3.5em",
                 }}
               >
                 Lyrics
               </div>
             </div>
             <ol className="top-tracks-list">
-              {this.props.topTracks.map(track => (
+              {this.props.topTracks.map((track) => (
                 <li className="songs" key={track}>
                   <div className="count" onClick={() => getVideo(track)}>
                     {count++}

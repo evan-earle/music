@@ -35,10 +35,10 @@ class App extends React.Component {
     getMore: null,
     similarArtist: null,
     similarTitle: null,
-    loading: false
+    loading: false,
   };
 
-  onTermSubmit = async term => {
+  onTermSubmit = async (term) => {
     this.setState({ loading: true, error: false });
 
     const KEY = "78a50c5d9505a79b657a2f71d67bb125";
@@ -74,7 +74,7 @@ class App extends React.Component {
     }
 
     //Get array of similar artists
-    const artistArray = similarArtists.map(element => element.name);
+    const artistArray = similarArtists.map((element) => element.name);
 
     let arr = artistArray;
     let newArr = [];
@@ -83,7 +83,7 @@ class App extends React.Component {
     for (let i = 0; i < arr.length; i++) {
       const getData = await fetch(
         `https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${arr[i]}&api_key=${KEY}&format=json&limit=9`
-      ).then(response => response.json());
+      ).then((response) => response.json());
       newArr.push(getData);
     }
 
@@ -103,7 +103,7 @@ class App extends React.Component {
     }
     //Getting array of tags, mapping to a new array, and joining them into a string
     const artist = artistInfo.artist.tags.tag;
-    const newArtist = artist.map(element => element.name);
+    const newArtist = artist.map((element) => element.name);
     const tags = newArtist.join(" / ");
 
     //Getting artist bio and cutting out the href link
@@ -112,7 +112,7 @@ class App extends React.Component {
 
     //Getting top tracks
     const top = topTracks.toptracks.track;
-    const newTopTracks = top.map(element => element.name);
+    const newTopTracks = top.map((element) => element.name);
 
     this.setState({
       page: "music",
@@ -124,11 +124,12 @@ class App extends React.Component {
       similarArtist: artistArray,
       similarImages: newArr,
       similarTitle: artistArray,
-      loading: false
+      loading: false,
     });
   };
 
   renderHome() {
+    console.log(process.env.REACT_APP_SONG_API_KEY);
     return (
       <div
         className="home-container"
